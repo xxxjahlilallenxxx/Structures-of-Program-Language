@@ -1,13 +1,21 @@
-(DEFINE (append lis1 lis2)
-        (COND
-         ((NULL? lis1) lis2)
-         (ELSE (CONS (CAR lis1)
-                     (append (CDR lis1) lis2)))
-         )
-        )
+(DEFINE (pick_last_element lis)
+  (CAR 
+   (CDR (cdr lis))
+   )
+  )
+(DEFINE (pick_middle_element lis)
+  (CAR
+   (CDR lis)
+   )
+  )
+(DEFINE (pick_first_element lis)
+  (CAR lis)
+  )
 
-(DEFINE (get_last_element lis1)
-        (CDR
-         (CDR (lis1))
-         )
-        )
+(DEFINE (reverse_general L)
+  (LIST
+   (pick_last_element L)
+   (pick_middle_element L)
+   (pick_first_element L)
+   )
+  )
