@@ -12,3 +12,16 @@
               (ELSE (inner_list (CDR L)))
               )
         )
+
+(DEFINE (reverse_general L)
+        (COND ((NULL? L) '())
+              ((LIST? L)
+               (append (reverse_general (CDR L))
+                       (LIST (reverse_general (CAR L)))
+                       )
+               )
+              (ELSE L)
+              )
+        )
+
+               
