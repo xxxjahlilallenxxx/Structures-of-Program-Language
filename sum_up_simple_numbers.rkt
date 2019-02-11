@@ -14,3 +14,16 @@
          )
         )
 
+(DEFINE x 0)
+(DEFINE (make-new-list lis)
+        (COND
+         ((char? lis) (make-new-list (CDR lis)))
+         (ELSE lis)
+         )
+        )
+(define (sum-up-numbers-simple L)
+        (IF (> (length L) 0)
+            (
+        
+
+
