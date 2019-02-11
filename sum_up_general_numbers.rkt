@@ -1,0 +1,18 @@
+(define sum 0)
+(define i 0)
+(define (execution L)
+  (display (+ L 1))
+  (\newline)
+  (display (+ L 2))
+  )
+(define (sum-up-numbers-general L)
+  (cond
+    ((> (length L) i)
+      (cond
+        (number? (list-ref L i))
+           (+ sum (list-ref L i))))
+    ((= (length L) i)
+     (sum))
+    )
+  sum-up-numbers-general(+ i 1)
+  )
